@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('perfume.png');
+    /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* Content box */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    max-width: 500px;
+}
+
+/* Brand */
+.brand {
+    font-family: "Pinyon Script", cursive;
+    font-size: 4em;
+    font-weight: 400;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInBrand 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+/* Tagline */
+.tagline {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInText 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    animation-delay: 1s;
+}
+
+/* Description */
+.desc {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeInText 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    animation-delay: 1.5s;
+}
+
+/* Launch text */
+.launch {
+    font-size: 1.3em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #f5e1c8;
+    opacity: 0;
+    animation: fadeInText 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    animation-delay: 2.2s;
+}
+
+/* Keyframes */
+@keyframes fadeInBrand {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .brand {
+        font-size: 3em;
+    }
+
+    .tagline {
+        font-size: 1.4em;
+    }
+
+    .desc {
+        font-size: 1em;
+    }
+
+    .launch {
+        font-size: 1.1em;
+    }
+}
